@@ -5,10 +5,11 @@ metadata:
 spec:
   ports:
      - port: 80
-       targetPort: 8080
        nodePort: 30001
+       targetPort: 8080
        protocol: TCP
+  selector:
+    app: vrpoapp      
   type:
      NodePort
-  selector:
-    app: vrpoapp              
+               
