@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+    name: scaling-rs
+    labels:
+       app: high-avalibilty
+spec:
+  replicas: 3
+  selector:
+      matchlabels:
+        app: google-img
+  template:
+      metadata:
+          name: test
+          labels:
+            app: google-img
+      spec: 
+         containers:
+              - name: google-cont
+                image: gcr.io/google-samples/hello-app:1.0                  
