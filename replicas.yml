@@ -5,7 +5,7 @@ metadata:
     labels:
        app: high-avalibilty
 spec:
-  replicas: 3
+  replicas: 5
   selector:
       matchLabels:
         app: google-img
