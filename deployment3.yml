@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+      name: vproapp-deployment
+spec:
+   template:
+       metadata:
+           name: vproapp-pod
+           labels:
+               app: vprofile
+       containers:
+             - name: vproapp-container
+               image: krunaldahake123/vproapp:v1
+               ports:
+                   containerPort: 8080
+               envFrom:
+                  -  name: var-vpro
+                     configMapKeyRef:
+                           db-username
+                  
+   replicas: 3
+   selector:
+         matchLabels:
+              app: vprofile                      

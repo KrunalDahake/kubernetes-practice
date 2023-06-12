@@ -1,0 +1,7 @@
+apiVersion: apps/v1
+kind: ConfigMap
+metadata:
+     name: db-info
+data:
+   db_name= mysqldb
+   db_username= vrpodb      

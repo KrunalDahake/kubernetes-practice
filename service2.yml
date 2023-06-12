@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+     name: vrpoapp-expose
+spec: 
+   ports:
+      - port: 3030
+        nodePort: 80
+        targetPort: 8080
+        protocol: TCP
+   selector:
+       app: vprofile
+   type: NodePort    
