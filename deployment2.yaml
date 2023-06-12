@@ -14,6 +14,11 @@ spec:
                   image: krunaldahake123/vprofileapp:v1
                   ports:
                       - containerPort: 8080
+                  command:
+                    - chown
+                    - -R
+                    - 472:472
+                    - /usr/local/tomcat 
                   volumeMounts:
                         - mountPath: /usr/local/tomcat
                           name: mydb      
