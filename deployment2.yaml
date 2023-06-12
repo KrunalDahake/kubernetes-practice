@@ -14,14 +14,7 @@ spec:
                   image: krunaldahake123/vprofileapp:v1
                   ports:
                       - containerPort: 8080
-                  volumeMounts:
-                        - mountPath: /usr/local/tomcat/
-                          name: mydb      
-          volumes:
-              - name: mydb 
-                hostPath:
-                     path: /data
-                     type: DirectoryOrCreate           
+                       
    replicas: 3
    selector:
          matchLabels:
