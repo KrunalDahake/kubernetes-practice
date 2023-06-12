@@ -21,7 +21,7 @@ spec:
               - name: mydb 
                 hostPath:
                      path: /var
-                type: DirectoryOrCreate           
+                     type: DirectoryOrCreate           
    replicas: 3
    selector:
          matchLabels:
