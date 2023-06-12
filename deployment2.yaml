@@ -13,8 +13,14 @@ spec:
                 - name: vproapp-container
                   image: krunaldahake123/vprofileapp:v1
                   ports:
-                      - containerPort: 8080    
-                  
+                      - containerPort: 8080
+                  volumeMounts:
+                        - mountPath: /usr/local/tomcat
+                          name: mydb      
+          volumes:
+              - name: mydb 
+                hostPath:
+                     path: /var      
    replicas: 3
    selector:
          matchLabels:
