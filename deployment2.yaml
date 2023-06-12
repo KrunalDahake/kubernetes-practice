@@ -20,7 +20,8 @@ spec:
           volumes:
               - name: mydb 
                 hostPath:
-                     path: /var      
+                     path: /var
+                type: DirectoryOrCreate           
    replicas: 3
    selector:
          matchLabels:
