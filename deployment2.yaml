@@ -12,7 +12,7 @@ spec:
              - name: vproapp-container
                image: krunaldahake123/vprofileapp:v1
                ports:
-                   containerPort: 8080    
+                  - containerPort: 8080    
                   
    replicas: 3
    selector:
