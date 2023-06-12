@@ -8,11 +8,12 @@ spec:
            name: vproapp-pod
            labels:
                app: vprofile
-       containers:
-             - name: vproapp-container
-               image: krunaldahake123/vprofileapp:v1
-               ports:
-                  - containerPort: 8080    
+       spec:         
+          containers:
+                - name: vproapp-container
+                  image: krunaldahake123/vprofileapp:v1
+                  ports:
+                      - containerPort: 8080    
                   
    replicas: 3
    selector:
