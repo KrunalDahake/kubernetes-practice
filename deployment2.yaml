@@ -12,7 +12,7 @@ spec:
       containers:
         - name: vproapp-container
           image: krunaldahake123/vprofileapp:v1
-          command: ["sh", "-c", "chmod -R 755 /usr/local/tomact"]
+          command: ["sh", "-c", "chmod -R 755 /usr/local/tomcat"]
           ports:
             - containerPort: 8080
           volumeMounts:
